@@ -1,4 +1,5 @@
 function somar(a, b) {
+  // Versão simples da soma
   return a + b;
 }
 
@@ -15,4 +16,9 @@ function dividir(a, b) {
   return a / b;
 }
 
-module.exports = { somar, subtrair, multiplicar, dividir };
+// Nova função adicionada na develop
+function porcentagem(valor, percent) {
+  return (valor * percent) / 100;
+}
+
+module.exports = { somar, subtrair, multiplicar, dividir, porcentagem };
