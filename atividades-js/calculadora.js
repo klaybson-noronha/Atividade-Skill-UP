@@ -46,11 +46,20 @@ function raizQuadrada(numero) {
   return Math.sqrt(numero);
 }
 
+// Nova função da develop com validações aprimoradas
+function porcentagem(valor, percent) {
+  if (typeof valor !== 'number' || typeof percent !== 'number') {
+    throw new Error('Argumentos devem ser números');
+  }
+  return (valor * percent) / 100;
+}
+
 module.exports = { 
   somar, 
   subtrair, 
   multiplicar, 
   dividir, 
   potencia, 
-  raizQuadrada 
+  raizQuadrada,
+  porcentagem 
 };

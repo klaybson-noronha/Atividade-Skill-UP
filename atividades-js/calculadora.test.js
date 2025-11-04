@@ -4,7 +4,8 @@ const {
   multiplicar, 
   dividir, 
   potencia, 
-  raizQuadrada 
+  raizQuadrada,
+  porcentagem 
 } = require('./calculadora');
 
 describe('Funções da calculadora', () => {
@@ -98,6 +99,25 @@ describe('Funções da calculadora', () => {
 
     test('deve lançar erro para argumentos não numéricos', () => {
       expect(() => raizQuadrada('a')).toThrow('Argumento deve ser um número');
+    });
+  });
+
+  describe('Operação de porcentagem', () => {
+    test('deve calcular porcentagem corretamente', () => {
+      expect(porcentagem(100, 10)).toBe(10);
+    });
+
+    test('deve calcular porcentagem de zero', () => {
+      expect(porcentagem(0, 50)).toBe(0);
+    });
+
+    test('deve calcular com porcentagem zero', () => {
+      expect(porcentagem(100, 0)).toBe(0);
+    });
+
+    test('deve lançar erro para argumentos não numéricos', () => {
+      expect(() => porcentagem('a', 5)).toThrow('Argumentos devem ser números');
+      expect(() => porcentagem(100, 'b')).toThrow('Argumentos devem ser números');
     });
   });
 });
