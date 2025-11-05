@@ -1,9 +1,35 @@
 {
   "name": "atividade-skill-up",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Projeto de demonstração com TDD, JavaScript e Git Flow - Calculadora e Validadores",
+  "main": "atividades-js/calculadora.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "javascript",
+    "tdd",
+    "jest",
+    "calculadora",
+    "validadores",
+    "gitflow"
+  ],
+  "author": "Klaybson Noronha",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/klaybson-noronha/Atividade-Skill-UP.git"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "atividades-js/**/*.js",
+      "!atividades-js/**/*.test.js"
+    ]
   }
 }
